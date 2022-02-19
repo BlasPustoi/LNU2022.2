@@ -14,10 +14,12 @@ def mult(A,B,C):
             for k in range(len(A[0])):
                 C[i][j]=C[i][j]+A[i][k]*B[k][i]
     return C
+#Версія без використання Numpy
 start=time.time()
 mult(A,B,C)
 end=time.time()
 print(end-start)
+#Версія з використання Numpy
 start=time.time()
 np.dot(A,B)
 end=time.time()
